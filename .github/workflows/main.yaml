@@ -11,12 +11,6 @@ jobs:
       - uses: actions/github-script@v8
         with:
           script: |
-            function add(a: number, b: number): number {
-                return a + b;
-            }
-
-            core.info(add(1, 41))
-
             const utils = await import('./utils.ts')
 
             core.info(utils.add(1, 41))
